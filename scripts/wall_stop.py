@@ -11,7 +11,7 @@ class WallStop():
     self.sensor_values = LightSensorValues()
     rospy.Subscriber('/lightsensors', LightSensorValues, self.callback)
 
-  def callback(self.messages):
+  def callback(self,messages):
     self.sensor_values = messages
 
   def run(self):
