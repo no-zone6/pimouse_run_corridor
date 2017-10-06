@@ -21,13 +21,13 @@ class WallStopAccelTest(unittest.TestCase):
     left, right = self.set_and_get(400,100,100,0) #total:600
     self.assertTrue(left == 0 and right == 0,"can't stop")
 
-    left, right = self.set_and_get(40,0,0,9) #total:49
+    left, right = self.set_and_get(400,0,0,99) #total:499
     self.assertTrue(0 < left == right < 1000 , "can't move again")
 
-    left, right = self.set_and_get(40,0,0,9) #total:49
+    left, right = self.set_and_get(400,0,0,99) #total:499
     self.assertTrue(2000 < left == right, "can't accerelate")
 
-    left, right = self.set_and_get(15,0,20,15)#total:50
+    left, right = self.set_and_get(150,0,200,150)#total:50
     self.assertTrue(left == 0 and right == 0, "can't stop")
 
 if __name__=='__main__':
